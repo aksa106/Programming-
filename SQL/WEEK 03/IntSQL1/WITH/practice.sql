@@ -55,16 +55,16 @@
 -- Use a CTE named avg_host_score.
 
 
-WITH avg_score as(
+-- WITH avg_score as(
 
-    select avg(host_team_score) as avg
-    from matches
+--     select avg(host_team_score) as avg
+--     from matches
 
-)
+-- )
 
-select match_num , host_team_score
-from matches , avg_score 
-where host_team_score < avg
+-- select match_num , host_team_score
+-- from matches , avg_score 
+-- where host_team_score < avg
 
 
 
@@ -74,7 +74,7 @@ where host_team_score < avg
 -- Task: Using a CTE named max_score, display the match_num and guest_team_score of matches where the guest team scored the highest number of goals across all matches.
 
 
-
+select * from matches
 
 
 
