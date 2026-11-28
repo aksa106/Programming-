@@ -74,10 +74,19 @@
 -- Task: Using a CTE named max_score, display the match_num and guest_team_score of matches where the guest team scored the highest number of goals across all matches.
 
 
-select * from matches
+
+with max_score as(
+
+    select max(guest_team_score) as max
+    from matches
 
 
 
+)
+
+select match_num, guest_team_score 
+from matches , max_score
+where guest_team_score > max 
 
 
 
